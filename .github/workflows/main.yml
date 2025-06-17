@@ -1,6 +1,6 @@
 name: Static Code Analysis
 
-on: [pull_request]
+on: [push, pull_request]
 
 jobs:
   lint-notebooks:
@@ -22,8 +22,8 @@ jobs:
 
       - name: Run nbqa flake8 on notebooks
         run: |
-          nbqa flake8 .
+          nbqa flake8 . --nbqa-diff
 
       - name: Run nbqa bandit for security analysis
         run: |
-          nbqa bandit -r .
+          nbqa bandit -r . --nbqa-diff
