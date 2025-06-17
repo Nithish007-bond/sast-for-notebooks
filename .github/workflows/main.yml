@@ -26,4 +26,4 @@ jobs:
 
       - name: Run nbqa bandit for security analysis
         run: |
-          nbqa bandit -r . --nbqa-diff
+          nbqa bandit -r . --nbqa-diff --verbose
