@@ -22,7 +22,7 @@ jobs:
 
       - name: Run nbqa flake8 on notebooks
         run: |
-          nbqa flake8 . --nbqa-diff
+          nbqa flake8 . --nbqa-diff --verbose
 
       - name: Run nbqa bandit for security analysis
         run: |
